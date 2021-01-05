@@ -2,7 +2,7 @@ const { template } = require("lodash");
 
 <template>
     <div>
-        Hello
+        Helo world
     </div>
 </template>
 
