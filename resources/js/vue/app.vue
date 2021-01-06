@@ -5,9 +5,7 @@
     <h2 id="title">Todo List</h2>
     <add-item-form/>
 </div>
-<list-view>
-
-
+<list-view/>
 </div>
 </template>
 
@@ -21,10 +19,8 @@ import listView from "./listView"
            listView    
        }  
     }
-
 </script>
-
-<style lang="stylus" scoped>
+<style  scoped>
 .todoListContainer{
     width: 350px;
     margin: auto;
