@@ -14,7 +14,7 @@ import ListItem from './listItem.vue'
 export default {
      props:['items'],
      components:{
-         listItem
+         ListItem
         //   ListItem
      },
      data:function(){
