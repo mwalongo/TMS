@@ -12163,9 +12163,43 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/vue/listItem.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\TMS\\resources\\js\\vue\\listItem.vue: Unexpected token, expected \",\" (34:0)\n\n\u001b[0m \u001b[90m 32 | \u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at Parser._raise (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:748:17)\n    at Parser.raiseWithData (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:741:17)\n    at Parser.raise (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Parser.unexpected (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9101:16)\n    at Parser.expect (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9087:28)\n    at Parser.parseObjectLike (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10923:14)\n    at Parser.parseExprAtom (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10491:23)\n    at Parser.parseExprSubscripts (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10150:23)\n    at Parser.parseUpdate (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10130:21)\n    at Parser.parseMaybeUnary (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10119:17)\n    at Parser.parseExprOps (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9989:23)\n    at Parser.parseMaybeConditional (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9963:23)\n    at Parser.parseMaybeAssign (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9926:21)\n    at C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9893:39\n    at Parser.allowInAnd (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11541:16)\n    at Parser.parseMaybeAssignAllowIn (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9893:17)\n    at Parser.parseExportDefaultExpression (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12885:24)\n    at Parser.parseExport (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12795:31)\n    at Parser.parseStatementContent (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11782:27)\n    at Parser.parseStatement (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11676:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12258:25)\n    at Parser.parseBlockBody (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12249:10)\n    at Parser.parseTopLevel (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11607:10)\n    at Parser.parse (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:13415:10)\n    at parse (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:13468:38)\n    at parser (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (C:\\xampp\\htdocs\\TMS\\node_modules\\gensync\\index.js:261:32)\n    at C:\\xampp\\htdocs\\TMS\\node_modules\\gensync\\index.js:273:13\n    at async.call.result.err.err (C:\\xampp\\htdocs\\TMS\\node_modules\\gensync\\index.js:223:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['item'],
+  methods: {
+    updateCheck: function updateCheck() {
+      var _this = this;
+
+      axios.put('api/item/' + this.item.id, {
+        item: this.item
+      }).then(function (response) {
+        if (response.status == 200) {
+          _this.$emit('itemchanged');
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  }
+});
 
 /***/ }),
 
@@ -12179,7 +12213,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _listItem_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./listItem.vue */ "./resources/js/vue/listItem.vue");
-//
 //
 //
 //
@@ -30742,8 +30775,7 @@ var render = function() {
             return _vm.getlist()
           }
         }
-      }),
-      _vm._v("\n/>\n")
+      })
     ],
     1
   )
