@@ -3,17 +3,33 @@
          <input 
          type="checkbox"
          @change="updateCheck()"
-         v-model="item.completed"/>
+         v-model="item.completed"
+         />
 
 <span :class="[item.completed ? 'completed': '','itemText' ]">{{item.name}}</span>
    <button @click="removeItem()" class="trashcan">
        <font-awesome-icon icon="trash"/>
+   </button>
     </div>
 </template>
 
 <script>
 export default {
-     props:['item']
+     props:['item'],
+     methods:{
+         updateCheck(){
+            axios.put('api/item/'+this.item.id,{
+                item:this.item
+            }) 
+            .then(response=>{
+                if(response.status == 200){
+                    this.$emit('itemchanged');
+                }
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+         }
 }
 </script>
 
@@ -35,7 +51,7 @@ export default {
 .trashcan{
     background:#e6e6e6e6;
     border: none;
-    color: #ff0880;
+    color: hsl(0, 100%, 52%);
     outline: none;
 }
 </style>

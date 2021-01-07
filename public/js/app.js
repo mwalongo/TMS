@@ -12126,12 +12126,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     addItemForm: _addItemForm__WEBPACK_IMPORTED_MODULE_0__["default"],
     listView: _listView__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      items: []
+    };
+  },
+  methods: {
+    getList: function getList() {
+      var _this = this;
+
+      axios.get('api/items').then(function (Response) {
+        _this.item = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
+  },
+  created: function created() {
+    this.getList();
   }
 });
 
@@ -12142,26 +12163,9 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/vue/listItem.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['item']
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\xampp\\htdocs\\TMS\\resources\\js\\vue\\listItem.vue: Unexpected token, expected \",\" (34:0)\n\n\u001b[0m \u001b[90m 32 | \u001b[39m         }\u001b[0m\n\u001b[0m \u001b[90m 33 | \u001b[39m}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 34 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m\u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at Parser._raise (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:748:17)\n    at Parser.raiseWithData (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:741:17)\n    at Parser.raise (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Parser.unexpected (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9101:16)\n    at Parser.expect (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9087:28)\n    at Parser.parseObjectLike (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10923:14)\n    at Parser.parseExprAtom (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10491:23)\n    at Parser.parseExprSubscripts (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10150:23)\n    at Parser.parseUpdate (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10130:21)\n    at Parser.parseMaybeUnary (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:10119:17)\n    at Parser.parseExprOps (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9989:23)\n    at Parser.parseMaybeConditional (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9963:23)\n    at Parser.parseMaybeAssign (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9926:21)\n    at C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9893:39\n    at Parser.allowInAnd (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11541:16)\n    at Parser.parseMaybeAssignAllowIn (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:9893:17)\n    at Parser.parseExportDefaultExpression (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12885:24)\n    at Parser.parseExport (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12795:31)\n    at Parser.parseStatementContent (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11782:27)\n    at Parser.parseStatement (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11676:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12258:25)\n    at Parser.parseBlockBody (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:12249:10)\n    at Parser.parseTopLevel (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:11607:10)\n    at Parser.parse (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:13415:10)\n    at parse (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\parser\\lib\\index.js:13468:38)\n    at parser (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (C:\\xampp\\htdocs\\TMS\\node_modules\\@babel\\core\\lib\\transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (C:\\xampp\\htdocs\\TMS\\node_modules\\gensync\\index.js:261:32)\n    at C:\\xampp\\htdocs\\TMS\\node_modules\\gensync\\index.js:273:13\n    at async.call.result.err.err (C:\\xampp\\htdocs\\TMS\\node_modules\\gensync\\index.js:223:11)");
 
 /***/ }),
 
@@ -12186,12 +12190,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['items'],
   components: {
-    listItem: listItem //   ListItem
-
+    ListItem: _listItem_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
@@ -12266,7 +12270,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.completed[data-v-1d1939b8]{\r\n    text-decoration: line-through;\r\n    color: #999999;\n}\n.itemText[data-v-1d1939b8]{\r\n    width: 100%;\r\n    margin-left: 20px;\n}\n.item[data-v-1d1939b8]{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items:center;\n}\n.trashcan[data-v-1d1939b8]{\r\n    background:#e6e6e6e6;\r\n    border: none;\r\n    color: #ff0880;\r\n    outline: none;\n}\r\n", ""]);
+exports.push([module.i, "\n.completed[data-v-1d1939b8]{\r\n    text-decoration: line-through;\r\n    color: #999999;\n}\n.itemText[data-v-1d1939b8]{\r\n    width: 100%;\r\n    margin-left: 20px;\n}\n.item[data-v-1d1939b8]{\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items:center;\n}\n.trashcan[data-v-1d1939b8]{\r\n    background:#e6e6e6e6;\r\n    border: none;\r\n    color: hsl(0, 100%, 52%);\r\n    outline: none;\n}\r\n", ""]);
 
 // exports
 
@@ -30731,7 +30735,15 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("list-view", { attrs: { items: _vm.items } })
+      _c("list-view", {
+        attrs: { items: _vm.items },
+        on: {
+          reloadlist: function($event) {
+            return _vm.getlist()
+          }
+        }
+      }),
+      _vm._v("\n/>\n")
     ],
     1
   )
@@ -30754,8 +30766,77 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "item" }, [
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.item.completed,
+          expression: "item.completed"
+        }
+      ],
+      attrs: { type: "checkbox" },
+      domProps: {
+        checked: Array.isArray(_vm.item.completed)
+          ? _vm._i(_vm.item.completed, null) > -1
+          : _vm.item.completed
+      },
+      on: {
+        change: [
+          function($event) {
+            var $$a = _vm.item.completed,
+              $$el = $event.target,
+              $$c = $$el.checked ? true : false
+            if (Array.isArray($$a)) {
+              var $$v = null,
+                $$i = _vm._i($$a, $$v)
+              if ($$el.checked) {
+                $$i < 0 && _vm.$set(_vm.item, "completed", $$a.concat([$$v]))
+              } else {
+                $$i > -1 &&
+                  _vm.$set(
+                    _vm.item,
+                    "completed",
+                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                  )
+              }
+            } else {
+              _vm.$set(_vm.item, "completed", $$c)
+            }
+          },
+          function($event) {
+            return _vm.updateCheck()
+          }
+        ]
+      }
+    }),
+    _vm._v(" "),
+    _c("span", { class: [_vm.item.completed ? "completed" : "", "itemText"] }, [
+      _vm._v(_vm._s(_vm.item.name))
+    ]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "trashcan",
+        on: {
+          click: function($event) {
+            return _vm.removeItem()
+          }
+        }
+      },
+      [_c("font-awesome-icon", { attrs: { icon: "trash" } })],
+      1
+    )
+  ])
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
@@ -30782,7 +30863,17 @@ var render = function() {
       return _c(
         "div",
         { key: index },
-        [_c("list-item", { staticClass: "item", attrs: { item: item } })],
+        [
+          _c("list-item", {
+            staticClass: "item",
+            attrs: { item: item },
+            on: {
+              itemchanged: function($event) {
+                return _vm.$emit("reloadlist")
+              }
+            }
+          })
+        ],
         1
       )
     }),

@@ -5,7 +5,9 @@
     <h2 id="title">Todo List</h2>
     <add-item-form/>
 </div>
-<list-view :items="items"/>
+<list-view :items="items"
+v-on:reloadlist="getlist()"/>
+/>
 </div>
 </template>
 
@@ -17,7 +19,27 @@ import listView from "./listView"
        components:{
            addItemForm,
            listView    
-       }  
+       },
+       data:function() {
+           return {
+               items:[]
+           }
+       },
+       methods:{
+           getList(){
+               axios.get('api/items')
+               .then(Response =>{
+                   this.item = response.data
+               })
+               .catch(error=>{ console.log(error)
+
+               })
+           }
+       },
+       created(){
+           this.getList();
+       }
+
     }
 </script>
 <style  scoped>
