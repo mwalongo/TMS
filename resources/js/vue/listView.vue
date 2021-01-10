@@ -15,7 +15,6 @@ export default {
      props:['items'],
      components:{
          ListItem,
-
      },
      data:function(){
          return { 
