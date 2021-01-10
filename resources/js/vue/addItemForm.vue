@@ -29,6 +29,7 @@ export default {
             .then(Response=>{
                 if(Response.status==201){
                  return   this.item.name=='';
+                 
                 }
             })
             .catch(error=>{
